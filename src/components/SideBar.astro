@@ -2,15 +2,17 @@
 import { Image } from "@astrojs/image/components";
 ---
 
-<div class="drawer-side bg-base-200">
-  <label for="my-drawer" class="drawer-overlay bg-base-200"></label>
+<div
+  class="drawer-side target:bg-inherit hover:cursor-default hover:bg-inherit"
+>
+  <label for="my-drawer" class="drawer-overlay bg-base-200/5"></label>
   <div
-    class="menu flex flex-col flex-nowrap p-4 overflow-y-auto w-[20rem] bg-base-200 text-base-content"
+    class="menu flex w-[20rem] cursor-default flex-col flex-nowrap overflow-y-auto bg-base-200 p-2 text-base-content lg:mx-6 lg:my-auto lg:h-fit lg:w-20 lg:rounded-3xl lg:bg-base-200 lg:shadow-xl"
   >
-    <div class="w-fit">
-      <a href="/">
+    <div class="flex w-fit">
+      <a class="lg:hidden" href="/">
         <div
-          class="avatar transition ease-in-out w-1/2 hover:scale-[102%] block m-auto mt-3 mb-6 h-36"
+          class="avatar m-auto mb-6 mt-3 block h-36 w-1/2 transition ease-in-out hover:scale-[102%]"
         >
           <div>
             <Image
@@ -19,24 +21,159 @@ import { Image } from "@astrojs/image/components";
               format="webp"
               width={300}
               height={300}
-              src="/profile.jpg"
+              src="/profile.png"
               alt="Profile image"
             />
           </div>
         </div>
       </a>
     </div>
-    <ul class="grow shrink">
+
+    <div class="flex shrink grow flex-col gap-2 dark:text-gray-200">
       <!-- Sidebar content here -->
-      <li><a id="home" href="/">Home</a></li>
-      <li><a id="projects" href="/projects">Projects</a></li>
-      <li><a id="services" href="/services">Services</a></li>
-      <li><a id="store" href="/store">Store</a></li>
-      <li><a id="blog" href="/blog/">Blog</a></li>
-      <li><a id="cv" href="/cv">CV</a></li>
-      <li><a href="mailto:contact.manuelernestog@gmail.com">Contact</a></li>
-    </ul>
-    <div class="social-icons px-4 my-2 flex self-center">
+      <div>
+        <a
+          class="flex gap-2 rounded-2xl p-4 transition-all hover:bg-neutral lg:rounded-full lg:hover:scale-105"
+          id="home"
+          href="/"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-home-2 lg:mx-auto"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+            <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"></path>
+            <path d="M10 12h4v4h-4z"></path>
+          </svg>
+          <p class="lg:hidden">Home</p>
+        </a>
+      </div>
+
+      <div>
+        <a
+          class="flex gap-2 rounded-2xl p-4 transition-all hover:bg-neutral lg:rounded-full lg:hover:scale-105"
+          id="projects"
+          href="/projects"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-home-2 lg:mx-auto"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M10 14l-2 -2l2 -2"></path>
+            <path d="M14 10l2 2l-2 2"></path>
+            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+          </svg>
+          <p class="lg:hidden">Projects</p>
+        </a>
+      </div>
+
+      <div>
+        <a
+          class="flex gap-2 rounded-2xl p-4 transition-all hover:bg-neutral lg:rounded-full lg:hover:scale-105"
+          id="blog"
+          href="/blog"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-home-2 lg:mx-auto"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
+            ></path>
+            <path d="M7 8h10"></path>
+            <path d="M7 12h10"></path>
+            <path d="M7 16h10"></path>
+          </svg>
+          <p class="lg:hidden">Blog</p>
+        </a>
+      </div>
+
+      <div>
+        <a
+          class="flex gap-2 rounded-2xl p-4 transition-all hover:bg-neutral lg:rounded-full lg:hover:scale-105"
+          id="cv"
+          href="/cv"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-home-2 lg:mx-auto"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0"></path>
+            <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
+          </svg>
+          <p class="lg:hidden">CV</p>
+        </a>
+      </div>
+
+      <div>
+        <a
+          class="flex gap-2 rounded-2xl p-4 transition-all hover:bg-neutral lg:rounded-full lg:hover:scale-105"
+          href="mailto:contact.yossthedev@gmail.com"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-home-2 lg:mx-auto"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+            ></path>
+            <path d="M3 7l9 6l9 -6"></path>
+          </svg>
+          <p class="lg:hidden">Contact</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="mx-auto my-2 h-1 w-1 rounded-full bg-gray-600/20 p-1"></div>
+
+    <div
+      class="social-icons my-2 flex gap-2 self-center px-4 dark:text-gray-400 lg:flex-col lg:gap-8 lg:px-0"
+    >
       <a
         href="https://manuelernestog.github.io/support-my-work/"
         target="_blank"
@@ -137,6 +274,7 @@ import { Image } from "@astrojs/image/components";
     </div>
   </div>
 </div>
+
 <script>
   const homeLink = document.getElementById("home");
   const projectsLink = document.getElementById("projects");
@@ -151,7 +289,7 @@ import { Image } from "@astrojs/image/components";
 
   const pages = [projectsLink, servicesLink, storeLink, blogLink, cvLink];
 
-  const activeClass = "bg-base-300"; // For primary color replace with `active` class
+  const activeClass = "bg-base-100"; // For primary color replace with `active` class
 
   pages.forEach((elem) => {
     if (elem?.id && url.includes(elem.id)) {
