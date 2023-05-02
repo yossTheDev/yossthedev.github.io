@@ -12,144 +12,105 @@ const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout>
-  <div class="flex flex-auto p-2 lg:p-6">
+  <div class="flex flex-auto flex-col gap-10 p-2 lg:p-1">
+    <!-- Hero Panel -->
     <div
-      class="bg flex flex-auto flex-col rounded-2xl bg-gradient-to-br from-primary to-secondary p-12 shadow-2xl shadow-primary/40 dark:shadow-primary/10 lg:flex-row"
+      class="gradient -skew-y-1 skew-x-1 rounded-3xl p-3 shadow-2xl shadow-primary/40 dark:shadow-primary/10"
     >
-      <div class="flex flex-auto flex-col">
-        <div class="mx-auto my-auto w-fit lg:ml-auto lg:w-96">
-          <h1
-            class="mt-2 whitespace-nowrap text-justify text-3xl font-bold text-white lg:mt-0 lg:text-7xl"
+      <div
+        class="flex max-h-[38rem] flex-auto select-none flex-col overflow-hidden rounded-3xl bg-base-200 bg-no-repeat p-12 shadow-2xl transition-all lg:flex-row"
+      >
+        <div class="order-2 flex flex-auto flex-col lg:order-1">
+          <div class="mx-auto my-auto w-fit lg:ml-auto lg:w-96">
+            <h1
+              class="mt-2 whitespace-nowrap text-center text-3xl font-bold dark:text-white lg:mt-0 lg:text-justify lg:text-7xl"
+            >
+              Yoannis <br class="" /> Sánchez <br class="" />
+              Soto
+            </h1>
+
+            <p
+              class="mt-4 text-center text-xl text-gray-400 dark:text-gray-200 lg:text-justify lg:text-xl"
+            >
+              Frontend and Software Developer
+            </p>
+          </div>
+        </div>
+
+        <div class="order-1 flex flex-auto flex-col lg:order-2">
+          <div
+            class="mx-auto my-auto rounded-full bg-white p-6 shadow-2xl lg:p-8"
           >
-            El <br class="hidden lg:block" /> Blog <br
-              class="hidden lg:block"
+            <Image
+              class="h-full w-full rounded-full shadow-xl shadow-primary"
+              aspectRatio="1:1"
+              format="webp"
+              width={300}
+              height={300}
+              src="/profile2.png"
+              alt="Profile image"
             />
-          </h1>
-
-          <p
-            class="text-justify text-3xl font-bold text-white lg:mt-0 lg:text-7xl"
-          >
-            de YOSS
-          </p>
-
-          <p
-            class="mt-4 text-center text-xl text-gray-200 lg:text-justify lg:text-xl"
-          >
-            Frontend and Software Developer
-          </p>
+          </div>
         </div>
       </div>
-      <div class="flex flex-auto flex-col">
-        <div
-          class="mx-auto my-auto rounded-full bg-white p-8 shadow-2xl lg:p-14"
-        >
-          <Image
-            class="rounded-full shadow-xl shadow-primary"
-            aspectRatio="1:1"
-            format="webp"
-            width={300}
-            height={300}
-            src="/profile2.png"
-            alt="Profile image"
+    </div>
+
+    <!-- Latest Projects -->
+    <div class="flex flex-auto flex-col gap-8 lg:flex-col">
+      <div class="flex flex-col gap-2">
+        <div class="mx-auto">
+          <div
+            class="mx-auto mb-6 mt-6 flex w-fit gap-2 font-bold text-gray-500"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="icon icon-tabler icon-tabler-code-circle my-auto"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              stroke="currentColor"
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <path d="M10 14l-2 -2l2 -2"></path>
+              <path d="M14 10l2 2l-2 2"></path>
+              <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+            </svg>
+            <p class="text-xl">Mis últimos proyectos</p>
+          </div>
+
+          <HorizontalCard
+            title="Demo Project 1"
+            img="/post_img.webp"
+            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            url="#"
+            badge="NEW"
+          />
+
+          <div class="mx-auto my-2 h-1 w-1 rounded-full bg-gray-600/20 p-1">
+          </div>
+          <HorizontalCard
+            title="Demo Project 2"
+            img="/post_img.webp"
+            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            url="#"
+          />
+
+          <div class="mx-auto my-2 h-1 w-1 rounded-full bg-gray-600/20 p-1">
+          </div>
+
+          <HorizontalCard
+            title="Demo Project 3"
+            img="/post_img.webp"
+            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            url="#"
+            badge="FOSS"
           />
         </div>
       </div>
-    </div>
-  </div>
-
-  <div class="flex flex-auto flex-col gap-8 lg:flex-row">
-    <div class="flex flex-col gap-2">
-      <div class="ml-auto">
-        <div class="mb-6 mt-4 flex w-full gap-2 font-bold text-gray-500">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-code-circle my-auto"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M10 14l-2 -2l2 -2"></path>
-            <path d="M14 10l2 2l-2 2"></path>
-            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-          </svg>
-          <p class="text-xl">Mis últimos proyectos</p>
-        </div>
-
-        <HorizontalCard
-          title="Demo Project 1"
-          img="/post_img.webp"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          url="#"
-          badge="NEW"
-        />
-        <div class="mx-auto my-2 h-1 w-1 rounded-full bg-gray-600/20 p-1"></div>
-        <HorizontalCard
-          title="Demo Project 2"
-          img="/post_img.webp"
-          desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-          url="#"
-        />
-      </div>
-
-      <div class="mx-auto my-2 h-1 w-1 rounded-full bg-gray-600/20 p-1"></div>
-      <HorizontalCard
-        title="Demo Project 3"
-        img="/post_img.webp"
-        desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        url="#"
-        badge="FOSS"
-      />
-    </div>
-
-    <div class="flex flex-col gap-2">
-      <div class="ml-auto">
-        <div class="mb-6 mt-4 flex w-full gap-2 font-bold text-gray-500">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="icon icon-tabler icon-tabler-article my-auto"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path
-              d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"
-            ></path>
-            <path d="M7 8h10"></path>
-            <path d="M7 12h10"></path>
-            <path d="M7 16h10"></path>
-          </svg>
-          <p class="text-xl">Ùltimas Publicaciones</p>
-        </div>
-      </div>
-      {
-        last_posts.map((post, index) => (
-          <>
-            <HorizontalCard
-              title={post.data.title}
-              img={post.data.heroImage}
-              desc={post.data.description}
-              url={"/blog/" + post.slug}
-              target="_self"
-              badge={post.data.badge}
-            />
-            {index != last_posts.length - 1 && (
-              <div class="mx-auto my-2 h-1 w-1 rounded-full bg-gray-600/20 p-1" />
-            )}
-          </>
-        ))
-      }
     </div>
   </div>
 </BaseLayout>

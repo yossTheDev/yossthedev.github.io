@@ -1,13 +1,26 @@
 ---
-const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
+const {
+  title,
+  img,
+  desc,
+  url,
+  badge,
+  tags,
+  target = "_blank",
+  newsPanel,
+} = Astro.props;
 import { Image } from "@astrojs/image/components";
 ---
 
 <div
-  class="rounded-3xl bg-base-200 p-1 transition ease-in-out hover:scale-[102%] hover:shadow-xl"
+  class="rounded-3xl bg-base-200 p-1 transition ease-in-out hover:bg-neutral"
 >
   <a href={url} target={target}>
-    <div class="hero-content flex-col md:flex-row">
+    <div
+      class={`hero-content flex-col  md:flex-row ${
+        newsPanel === true && "flex-wrap"
+      }`}
+    >
       {
         img && (
           <Image
@@ -16,14 +29,20 @@ import { Image } from "@astrojs/image/components";
             width={750}
             format="webp"
             alt={title}
-            class="max-w-full rounded-xl md:max-w-[13rem]"
+            class="flex w-full max-w-full rounded-xl md:max-w-[13rem]"
           />
         )
       }
       <div class="w-full grow">
-        <h1 class="text-xl font-bold">
+        <h1 class="poppins-bold text-xl font-bold">
           {title}
-          {badge && <div class="badge-primary badge mx-2">{badge}</div>}
+          {
+            badge && (
+              <div class="gradient badge-primary badge mx-2 border-none">
+                {badge}
+              </div>
+            )
+          }
         </h1>
         <p class="text-1xl py-1">{desc}</p>
         <div class="card-actions justify-end">
