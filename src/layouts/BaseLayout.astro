@@ -28,7 +28,7 @@ const last_posts = posts.slice(0, 3);
     <BaseHead title={title} description={description} image={image} />
   </head>
   <body class="bg-base-100">
-    <div class="drawer-mobile drawer dark:text-white">
+    <div class="drawer-mobile drawer text-white">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content flex flex-col">
         <Header title={SITE_TITLE} />
@@ -44,7 +44,7 @@ const last_posts = posts.slice(0, 3);
             <div class="flex flex-col gap-2">
               <div class="mx-auto">
                 <div
-                  class="mb-2 mt-4 flex w-full gap-2 font-bold text-gray-500"
+                  class="mb-2 mt-4 flex w-full gap-2 font-bold text-white text-gray-500"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +83,7 @@ const last_posts = posts.slice(0, 3);
                     newsPanel={true}
                   />
                   {index != last_posts.length - 1 && (
-                    <div class="mx-auto my-2 h-1 w-1 rounded-full bg-gray-600/20 p-1" />
+                    <divider class="mx-auto my-2 h-1 w-1 rounded-full bg-gray-600/20 p-1" />
                   )}
                 </>
               ))

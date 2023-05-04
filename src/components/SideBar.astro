@@ -7,10 +7,10 @@ import { Image } from "@astrojs/image/components";
 >
   <label for="my-drawer" class="drawer-overlay bg-base-200/5"></label>
   <div
-    class="menu flex w-[20rem] cursor-default flex-col flex-nowrap overflow-y-auto bg-base-200 p-2 text-gray-800 lg:my-4 lg:w-20 lg:bg-base-100"
+    class="menu flex w-[20rem] cursor-default flex-col flex-nowrap overflow-y-auto bg-base-100 p-2 text-gray-800 lg:my-4 lg:w-20"
   >
     <div class="flex w-fit">
-      <a class="lg:hidden" href="/">
+      <a rel="prefetch" class="lg:hidden" href="/">
         <div
           class="avatar m-auto mb-6 mt-3 block h-36 w-1/2 transition ease-in-out hover:scale-[102%]"
         >
@@ -29,10 +29,11 @@ import { Image } from "@astrojs/image/components";
       </a>
     </div>
 
-    <div class="flex shrink grow flex-col gap-2 dark:text-gray-200">
+    <div class="flex shrink grow gap-1 flex-col lg:gap-2 text-gray-200">
       <!-- Sidebar content here -->
       <div>
         <a
+          rel="prefetch"
           class="flex gap-2 rounded-2xl p-4 transition-all hover:bg-neutral lg:rounded-3xl lg:hover:scale-105"
           id="home"
           href="/"
@@ -60,6 +61,7 @@ import { Image } from "@astrojs/image/components";
 
       <div>
         <a
+          rel="prefetch"
           class="flex gap-2 rounded-2xl p-4 transition-all hover:bg-neutral lg:rounded-3xl lg:hover:scale-105"
           id="projects"
           href="/projects"
@@ -87,6 +89,7 @@ import { Image } from "@astrojs/image/components";
 
       <div>
         <a
+          rel="prefetch"
           class="flex gap-2 rounded-2xl p-4 transition-all hover:bg-neutral lg:rounded-3xl lg:hover:scale-105"
           id="blog"
           href="/blog"
@@ -117,6 +120,7 @@ import { Image } from "@astrojs/image/components";
 
       <div>
         <a
+          rel="prefetch"
           class="flex gap-2 rounded-2xl p-4 transition-all hover:bg-neutral lg:rounded-3xl lg:hover:scale-105"
           id="cv"
           href="/cv"
@@ -172,7 +176,7 @@ import { Image } from "@astrojs/image/components";
     <div class="mx-auto my-3 h-1 w-1 rounded-full bg-gray-600/10 p-1"></div>
 
     <div
-      class="social-icons my-2 flex gap-2 self-center px-4 dark:text-gray-400 lg:flex-col lg:gap-8 lg:px-0"
+      class="social-icons my-2 flex gap-2 self-center px-4 text-gray-400 lg:flex-col lg:gap-8 lg:px-0"
     >
       <a
         href="https://manuelernestog.github.io/support-my-work/"

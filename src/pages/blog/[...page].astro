@@ -25,7 +25,7 @@ const { page } = Astro.props;
       </div>
     ) : (
       <ul>
-        {page.data.map((post) => (
+        {page.data.map((post, index) => (
           <>
             <HorizontalCard
               title={post.data.title}
@@ -35,7 +35,9 @@ const { page } = Astro.props;
               target="_self"
               badge={post.data.badge}
             />
-            <div class="divider my-0" />
+            {index != page.data.length - 1 && (
+              <div class="mx-auto my-2 h-1 w-1 rounded-full bg-gray-600/20 p-1" />
+            )}
           </>
         ))}
       </ul>

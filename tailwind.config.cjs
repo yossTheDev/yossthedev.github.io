@@ -11,31 +11,7 @@ module.exports = {
     // themes: true,
     themes: [
       {
-        light: {
-          primary: "#e09553",
-
-          secondary: "#edcb3b",
-
-          accent: "#d97706",
-
-          neutral: "#e5e7eb",
-
-          "base-100": "#ECECEC",
-
-          info: "#22d3ee",
-
-          success: "#9CB686",
-
-          warning: "#FFD261",
-
-          error: "#FC9783",
-
-          "base-200": "#f3f4f6",
-          "base-300": "#ced3d9",
-          "base-content": "#000000",
-        },
-
-        dark: {
+        yoss_theme: {
           primary: "#e09553",
 
           secondary: "#ff39b6",

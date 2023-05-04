@@ -26,8 +26,8 @@ img {
 
 @font-face {
 	font-family: 'Poppins-Font';
-	src: url('./fonts/Poppins-Regular.ttf') format('woff2'),
-		url('./fonts/Poppins-Regular.ttf') format('woff');
+	src: url('/fonts/Poppins-Regular.ttf') format('woff2'),
+		url('/fonts/Poppins-Regular.ttf') format('woff');
 	font-weight: bold;
 	font-style: bold;
 	font-display: swap;
@@ -35,8 +35,8 @@ img {
 
 @font-face {
 	font-family: 'Poppins-Font-Bold';
-	src: url('./fonts/Poppins-Bold.ttf') format('woff2'),
-		url('./fonts/Poppins-Bold.ttf') format('woff');
+	src: url('/fonts/Poppins-Bold.ttf') format('woff2'),
+		url('/fonts/Poppins-Bold.ttf') format('woff');
 	font-weight: bold;
 	font-style: bold;
 	font-display: swap;
