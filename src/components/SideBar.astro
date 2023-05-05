@@ -147,6 +147,37 @@ import { Image } from "@astrojs/image/components";
 
       <div>
         <a
+          rel="prefetch"
+          class="flex gap-2 rounded-2xl p-4 transition-all hover:bg-neutral lg:rounded-3xl lg:hover:scale-105"
+          id="support"
+          href="/support"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon icon-tabler icon-tabler-home-2 lg:mx-auto"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="currentColor"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path
+              d="M3 14c.83 .642 2.077 1.017 3.5 1c1.423 .017 2.67 -.358 3.5 -1c.83 -.642 2.077 -1.017 3.5 -1c1.423 -.017 2.67 .358 3.5 1"
+            ></path>
+            <path d="M8 3a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2"></path>
+            <path d="M12 3a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2"></path>
+            <path d="M3 10h14v5a6 6 0 0 1 -6 6h-2a6 6 0 0 1 -6 -6v-5z"></path>
+            <path d="M16.746 16.726a3 3 0 1 0 .252 -5.555"></path>
+          </svg>
+          <p class="lg:hidden">Apóyame</p>
+        </a>
+      </div>
+      <div>
+        <a
           class="flex gap-2 rounded-2xl p-4 transition-all hover:bg-neutral lg:rounded-3xl lg:hover:scale-105"
           href="mailto:contact.yossthedev@gmail.com"
         >
@@ -179,36 +210,6 @@ import { Image } from "@astrojs/image/components";
     <div
       class="social-icons my-2 flex gap-2 self-center px-4 text-gray-400 lg:flex-col lg:gap-8 lg:px-0"
     >
-      <a
-        href="/support"
-        rel="prefetch"
-        class="mx-3 lg:mx-auto"
-        aria-label="Support my work"
-        title="Support my work"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="icon icon-tabler icon-tabler-coffee"
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-          <path
-            d="M3 14c.83 .642 2.077 1.017 3.5 1c1.423 .017 2.67 -.358 3.5 -1c.83 -.642 2.077 -1.017 3.5 -1c1.423 -.017 2.67 .358 3.5 1"
-          ></path>
-          <path d="M8 3a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2"></path>
-          <path d="M12 3a2.4 2.4 0 0 0 -1 2a2.4 2.4 0 0 0 1 2"></path>
-          <path d="M3 10h14v5a6 6 0 0 1 -6 6h-2a6 6 0 0 1 -6 -6v-5z"></path>
-          <path d="M16.746 16.726a3 3 0 1 0 .252 -5.555"></path>
-        </svg>
-      </a>
-
       <a
         href="https://github.com/yossthedev"
         target="_blank"
@@ -326,12 +327,20 @@ import { Image } from "@astrojs/image/components";
   const storeLink = document.getElementById("store");
   const blogLink = document.getElementById("blog");
   const cvLink = document.getElementById("cv");
+  const supportLink = document.getElementById("support");
 
   var isHome = true;
 
   const url = window.location.href;
 
-  const pages = [projectsLink, servicesLink, storeLink, blogLink, cvLink];
+  const pages = [
+    projectsLink,
+    servicesLink,
+    storeLink,
+    blogLink,
+    cvLink,
+    supportLink,
+  ];
 
   const activeClass = "bg-base-200"; // For primary color replace with `active` class
 
