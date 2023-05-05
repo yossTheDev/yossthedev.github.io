@@ -24,7 +24,7 @@ const { page } = Astro.props;
         <p>There are no blog posts to show at the moment. Check back later!</p>
       </div>
     ) : (
-      <ul>
+      <ul class="p-2">
         {page.data.map((post, index) => (
           <>
             <HorizontalCard

@@ -8,22 +8,23 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     <div class="text-3xl w-full font-bold mb-5">Proyectos</div>
   </div>
 
-  <HorizontalCard
-    title="Karbonized"
-    img="projects/karbonized.png"
-    desc="Generador de imágenes de fragmentos de codigo o screenshots"
-    url="#"
-    badge="FOSS"
-  />
+  <div class="p-2">
+    <HorizontalCard
+      title="Karbonized"
+      img="projects/karbonized.png"
+      desc="Generador de imágenes de fragmentos de codigo o screenshots"
+      url="#"
+      badge="FOSS"
+    />
 
-  <divider class="mx-auto my-2 h-1 w-1 rounded-full bg-gray-600/20 p-1"
-  ></divider>
+    <div class="mx-auto my-2 h-1 w-1 rounded-full bg-gray-600/20 p-1"></div>
 
-  <HorizontalCard
-    title="Prossa"
-    img="projects/prossa.png"
-    desc="Lector de ebooks gratis y Open Source"
-    url="#"
-    badge="FOSS"
-  />
+    <HorizontalCard
+      title="Prossa"
+      img="projects/prossa.png"
+      desc="Lector de ebooks gratis y Open Source"
+      url="#"
+      badge="FOSS"
+    />
+  </div>
 </BaseLayout>
