@@ -3,4 +3,4 @@
 
 export const SITE_TITLE = "Y O S S | The Dev";
 export const SITE_DESCRIPTION =
-  "Astro Modern Personal Website template with Project Section, CV Section, Paginated Blog, RSS Feed, SEO Friendly, Visual themes and Responsive Desing.";
+  "Desarrollador Front-End, Open Source, Linuxero y escribo en mi Blog";
