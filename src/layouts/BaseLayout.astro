@@ -33,7 +33,7 @@ const last_posts = posts.slice(0, 3);
       <div class="drawer-content flex flex-col">
         <Header title={SITE_TITLE} />
         <div class="flex flex-auto flex-col lg:flex-row">
-          <main class="flex flex-auto flex-col p-6 pt-10">
+          <main class="flex flex-auto flex-col p-4 lg:p-6 lg:pt-10">
             <slot />
           </main>
 
@@ -44,7 +44,7 @@ const last_posts = posts.slice(0, 3);
             <div class="flex flex-col gap-2">
               <div class="mx-auto">
                 <div
-                  class="mb-2 mt-4 flex w-full gap-2 font-bold text-white text-gray-500"
+                  class="mb-2 mt-4 flex w-full gap-2 font-bold text-gray-500"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

@@ -10,13 +10,13 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <BaseLayout>
-  <div class="flex flex-auto flex-col gap-10 p-2 lg:p-1">
+  <div class="flex flex-auto flex-col gap-10 p-3 lg:p-1">
     <!-- Hero Panel -->
     <div
-      class="gradient -skew-y-1 skew-x-1 rounded-3xl p-3 shadow-xl shadow-primary/10"
+      class="gradient -skew-y-1 skew-x-1 lg:pt-10 lg:pb-10 lg:pl-10 rounded-3xl p-4 max-h-80 mb-48 lg:shadow-xl shadow-inner lg:shadow-primary/10"
     >
       <div
-        class="flex max-h-[38rem] flex-auto select-none flex-col overflow-hidden rounded-3xl bg-base-200 bg-no-repeat p-8 shadow-2xl transition-all lg:flex-row lg:p-12"
+        class="skew-y-1 -skew-x-1 lg:-skew-y-1 lg:skew-x-1 flex max-h-[38rem] flex-auto select-none flex-col overflow-hidden rounded-3xl bg-base-200 bg-no-repeat p-8 shadow-2xl transition-all lg:flex-row lg:p-12"
       >
         <div class="order-2 flex flex-auto flex-col lg:order-1">
           <div class="mx-auto my-auto w-fit lg:ml-auto lg:w-96">
@@ -37,10 +37,10 @@ const posts = (await getCollection("blog")).sort(
 
         <div class="order-1 flex flex-auto flex-col lg:order-2">
           <div
-            class="mx-auto my-auto rounded-full bg-white p-6 shadow-2xl lg:p-8"
+            class="mx-auto my-auto rounded-full lg:bg-white p-6 lg:shadow-inner shadow-2xl lg:p-8"
           >
             <Image
-              class="h-full w-full rounded-full shadow-xl shadow-primary"
+              class="h-full w-full rounded-full shadow-xl lg:shadow-primary"
               aspectRatio="1:1"
               format="webp"
               width={300}
