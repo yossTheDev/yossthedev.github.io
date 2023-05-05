@@ -1,21 +1,24 @@
-import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
-import sitemap from '@astrojs/sitemap';
+import { defineConfig } from "astro/config";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
-import prefetch from '@astrojs/prefetch';
-
+import prefetch from "@astrojs/prefetch";
 
 // https://astro.build/config
 import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-modern-personal-website.netlify.app',
-  integrations: [mdx(),prefetch(), sitemap(), tailwind(), image(
-    {
-      serviceEntryPoint: '@astrojs/image/sharp',
+  site: "https://yossthede.github.io",
+  integrations: [
+    mdx(),
+    prefetch(),
+    sitemap(),
+    tailwind(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
       cacheDir: "./.cache/image",
-      logLevel: 'debug',
-    }
-  )]
+      logLevel: "debug",
+    }),
+  ],
 });
