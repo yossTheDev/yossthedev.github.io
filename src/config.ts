@@ -3,4 +3,4 @@
 
 export const SITE_TITLE = "Y O S S | The Dev";
 export const SITE_DESCRIPTION =
-  "Desarrollador Front-End, Open Source, Linuxero y escribo en mi Blog";
+  "Desarrollador Front-End 🌐 y 🐧 Linuxero. Aprendo y escribo en mi Blog";
