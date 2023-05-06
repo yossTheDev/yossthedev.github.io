@@ -2,7 +2,7 @@
 title: "Presentando a Prossa"
 description: "Prossa la app que te ayuda a cultivar el hábito de lectura"
 pubDate: "May 4 2023"
-heroImage: "/projects/prossa.png"
+heroImage: "/prossa.png"
 ---
 
 Leer es una actividad que entretiene y enriquece. Sin embargo a veces nos cuesta encontrar el tiempo o la motivación para leer, y terminamos postergando esta actividad. Por eso hoy quiero mostrarte Prossa la app que te ayudará a mantener tu enfoque en la lectura y acumular una gran racha de días de lectura.

@@ -2,7 +2,7 @@
 title: "Presentando a Karbonized"
 description: "Karbonized la app para crear imágenes de código y mockups personalizados"
 pubDate: "May 5 2023"
-heroImage: "/projects/karbonized.png"
+heroImage: "/karbonized.png"
 ---
 Karbonized es una aplicación de creación de imágenes gratuita y de código abierto que permite crear fácilmente imágenes de fragmento de código y mockups de tus capturas de pantalla. Con la capacidad de combinar bloques en una sola imagen, Karbonized puede ser una herramienta de diseño útil para desarrolladores y creadores de contenido o cualquier persona que quiera crear diseños rápidamente.
 
