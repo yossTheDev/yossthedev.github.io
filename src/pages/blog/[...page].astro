@@ -34,6 +34,7 @@ const { page } = Astro.props;
               url={"/blog/" + post.slug}
               target="_self"
               badge={post.data.badge}
+              tags={post.data.tags}
             />
             {index != page.data.length - 1 && (
               <div class="mx-auto my-2 h-1 w-1 rounded-full bg-gray-600/20 p-1" />

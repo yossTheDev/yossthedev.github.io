@@ -18,7 +18,7 @@ import { Image } from "@astrojs/image/components";
   <a href={url} target={target}>
     <div
       class={`hero-content flex-col  md:flex-row ${
-        newsPanel === true && "flex-wrap"
+        newsPanel === true && "flex-wrap p-2"
       }`}
     >
       {
@@ -45,10 +45,16 @@ import { Image } from "@astrojs/image/components";
           }
         </h1>
         <p class="text-1xl py-1">{desc}</p>
-        <div class="card-actions justify-end">
+        <div class="card-actions justify-start">
           {
             tags &&
-              tags.map((tag) => <div class="badge-outline badge">{tag}</div>)
+              tags
+                .split(" ")
+                .map((tag) => (
+                  <div class="badge-outline border-primary text-primary badge">
+                    {tag}
+                  </div>
+                ))
           }
         </div>
       </div>

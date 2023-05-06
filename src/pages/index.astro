@@ -3,10 +3,6 @@ import { Image } from "@astrojs/image/components";
 import { getCollection } from "astro:content";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
-);
 ---
 
 <BaseLayout>
