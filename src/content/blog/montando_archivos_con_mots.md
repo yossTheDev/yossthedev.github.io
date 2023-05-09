@@ -11,7 +11,7 @@ Hola a todos 👋 hoy les traigo una pequeña herramienta para montar archivos e
 
 ## Instalación
 
-La instalacion es muy sencilla solo debemos disponer de una versión reciente de NodeJS instalada en nuestro dispositivo. Puedes visitar la pagina oficial de [NodeJS](https://nodejs.com) para las intrucciones de instalación en tu sistema. Luego de eso es solo ejecutar este comando:
+La instalacion es muy sencilla solo debemos disponer de una versión reciente de NodeJS instalada en nuestro dispositivo. Puedes visitar la pagina oficial de [NodeJS](https://nodejs.org) para las intrucciones de instalación en tu sistema. Luego de eso es solo ejecutar este comando:
 
 ``` bash
 npm install -g mots
