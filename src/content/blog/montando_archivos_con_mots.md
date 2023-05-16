@@ -3,7 +3,6 @@ title: "Montando archivos con MOTS"
 description: "Una útil herramienta para servir archivos estáticos desde la terminal"
 pubDate: "May 6 2023"
 heroImage: "/mots_scr.png"
-badge: "New"
 tags: "cli tools"
 ---
 
