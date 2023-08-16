@@ -12,15 +12,13 @@ module.exports = {
     themes: [
       {
         yoss_theme: {
-          primary: "#e09553",
+          primary: "#7A68D6",
 
           secondary: "#ff39b6",
 
           accent: "#d97706",
 
           neutral: "#111111",
-
-          "base-100": "#0A0A0A",
 
           info: "#22d3ee",
 
@@ -30,6 +28,7 @@ module.exports = {
 
           error: "#FC9783",
 
+          "base-100": "#0A0A0A",
           "base-200": "#0E0E0E",
           "base-300": "#ced3d9",
           "base-content": "#000000",

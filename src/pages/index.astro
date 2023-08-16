@@ -8,12 +8,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <div class="flex flex-auto flex-col gap-10 p-3 lg:p-1">
     <!-- Hero Panel -->
     <div
-      class="gradient -skew-y-1 skew-x-1 lg:pt-10 lg:pb-10 lg:pl-10 rounded-3xl p-4 max-h-80 lg:mb-48 mb-56 lg:shadow-xl shadow-inner lg:shadow-primary/10"
+      class="hero-gradient flex relative -skew-y-1 skew-x-1 lg:pt-10 lg:pb-10 lg:pl-10 rounded-3xl p-2 max-h-80 lg:mb-48 mb-60 lg:shadow-xl shadow-inner lg:shadow-primary/10"
     >
       <div
-        class="skew-y-1 -skew-x-1 lg:-skew-y-1 lg:skew-x-1 flex max-h-[38rem] flex-auto select-none flex-col overflow-hidden rounded-3xl bg-base-200 bg-no-repeat p-8 shadow-2xl transition-all lg:flex-row lg:p-12"
+        class="skew-y-1 h-[36rem] lg:h-96 border-4 lg:border-0 border-primary -skew-x-1 lg:-skew-y-1 lg:skew-x-1 flex max-h-[38rem] flex-auto select-none flex-col overflow-hidden rounded-3xl bg-base-200 bg-no-repeat shadow-2xl transition-all lg:flex-row"
       >
-        <div class="order-2 flex flex-auto flex-col lg:order-1">
+        <!-- Hero Text -->
+        <div class="order-2 -mt-20 md:mt-0 flex flex-auto flex-col lg:order-1">
           <div class="mx-auto my-auto w-fit lg:ml-auto lg:w-96">
             <h1
               class="mt-2 whitespace-nowrap text-center text-3xl font-bold text-white lg:mt-0 lg:text-justify lg:text-7xl"
@@ -28,7 +29,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               Frontend and Software Developer
             </p>
 
-            <div class="flex mt-4 gap-2">
+            <div class="lg:flex mt-4 gap-2 hidden">
               <div class="p-2 bg-neutral rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -129,17 +130,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </div>
         </div>
 
-        <div class="order-1 flex flex-auto flex-col lg:order-2">
+        <!-- Hero Image -->
+        <div class="order-1 flex p-2 flex-auto flex-col lg:order-2">
           <div
-            class="mx-auto my-auto rounded-full lg:bg-white p-6 lg:shadow-inner shadow-2xl lg:p-8"
+            class="my-auto rounded-full bg-white p-6 mx-6 lg:mx-auto shadow-2xl lg:p-8 lg:shadow-primary lg:shadow-xs"
           >
             <Image
-              class="h-full w-full rounded-full shadow-xl lg:shadow-primary"
+              class="h-full w-full rounded-full"
               aspectRatio="1:1"
               format="webp"
               width={300}
               height={300}
-              src="/profile2.png"
+              src="/profile_pic.png"
               alt="Profile image"
             />
           </div>
