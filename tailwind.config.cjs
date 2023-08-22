@@ -18,7 +18,7 @@ module.exports = {
 
           accent: "#d97706",
 
-          neutral: "#111111",
+          neutral: "#242424",
 
           info: "#22d3ee",
 
@@ -29,8 +29,8 @@ module.exports = {
           error: "#FC9783",
 
           "base-100": "#0A0A0A",
-          "base-200": "#0E0E0E",
-          "base-300": "#ced3d9",
+          "base-200": "#121212",
+          "base-300": "#222222",
           "base-content": "#000000",
         },
       },
