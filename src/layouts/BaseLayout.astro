@@ -7,6 +7,7 @@ import SideBar from "../components/SideBar.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 import { getCollection } from "astro:content";
 import HorizontalCard from "../components/HorizontalCard.astro";
+import { ViewTransitions } from "astro:transitions";
 
 const {
   image,
@@ -27,7 +28,8 @@ const last_posts = posts.slice(0, 3);
 <html lang="en" data-theme="lofi">
   <head>
     <BaseHead title={title} description={description} image={image} />
-
+    <ViewTransitions />
+    
     <!-- Google tag (gtag.js) -->
     <script
       type="text/partytown"
