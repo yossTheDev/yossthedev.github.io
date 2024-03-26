@@ -121,6 +121,7 @@ import SideItem from "./SideItem.astro";
       </SideItem>
     </div>
 
+    <!-- Separator -->
     <div class="mx-auto my-3 h-1 w-1 rounded-full bg-gray-600/10 p-1"></div>
 
     <!-- Social Networks -->
@@ -218,36 +219,42 @@ import SideItem from "./SideItem.astro";
 </div>
 
 <script>
-  const homeLink = document.getElementById("home");
-  const projectsLink = document.getElementById("projects");
-  const servicesLink = document.getElementById("services");
-  const storeLink = document.getElementById("store");
-  const blogLink = document.getElementById("blog");
-  const cvLink = document.getElementById("cv");
-  const supportLink = document.getElementById("support");
+  document.addEventListener("astro:page-load", () => {
+    const homeLink = document.getElementById("home");
+    const projectsLink = document.getElementById("projects");
+    const servicesLink = document.getElementById("services");
+    const storeLink = document.getElementById("store");
+    const blogLink = document.getElementById("blog");
+    const cvLink = document.getElementById("cv");
+    const supportLink = document.getElementById("support");
 
-  var isHome = true;
+    var isHome = true;
 
-  const url = window.location.href;
+    const pages = [
+      projectsLink,
+      servicesLink,
+      storeLink,
+      blogLink,
+      cvLink,
+      supportLink,
+    ];
 
-  const pages = [
-    projectsLink,
-    servicesLink,
-    storeLink,
-    blogLink,
-    cvLink,
-    supportLink,
-  ];
+    // This only runs once.
+    const activeClass = "bg-base-200"; // For primary color replace with `active` class
+    const url = window.location.href;
 
-  const activeClass = "bg-base-200"; // For primary color replace with `active` class
+    console.log(url);
+    console.log("load");
 
-  pages.forEach((elem) => {
-    if (elem?.id && url.includes(elem.id)) {
-      isHome = false;
-      elem?.classList.add(activeClass);
+    pages.forEach((elem) => {
+      if (elem?.id && url.includes(elem.id)) {
+        console.log(elem.id);
+        isHome = false;
+        elem?.classList.add(activeClass);
+      }
+    });
+    if (isHome) {
+      homeLink?.classList.add(activeClass);
     }
   });
-  if (isHome) {
-    homeLink?.classList.add(activeClass);
-  }
 </script>

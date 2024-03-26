@@ -1,13 +1,12 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import SideBar from "../components/SideBar.astro";
-
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 import { getCollection } from "astro:content";
+import { ViewTransitions, slide } from "astro:transitions";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
-import { ViewTransitions } from "astro:transitions";
+import SideBar from "../components/SideBar.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
 
 const {
   image,
@@ -24,18 +23,17 @@ const posts = (await getCollection("blog")).sort(
 const last_posts = posts.slice(0, 3);
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="lofi">
   <head>
     <BaseHead title={title} description={description} image={image} />
-    <ViewTransitions/>
-    
+    <ViewTransitions />
+
     <!-- Google tag (gtag.js) -->
     <script
       type="text/partytown"
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-X851WQC84E"
-    ></script>
+      src="https://www.googletagmanager.com/gtag/js?id=G-X851WQC84E"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -50,8 +48,7 @@ const last_posts = posts.slice(0, 3);
     <script
       defer
       src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "e06c78200d25473f9e64203047113ac7"}'
-    ></script>
+      data-cf-beacon='{"token": "e06c78200d25473f9e64203047113ac7"}'></script>
     <!-- End Cloudflare Web Analytics -->
   </head>
 
@@ -62,7 +59,10 @@ const last_posts = posts.slice(0, 3);
         <Header title={SITE_TITLE} />
         <div class="flex flex-auto flex-col lg:flex-row">
           <div id="breadcums"></div>
-          <main class="flex flex-auto flex-col p-4 lg:p-6 lg:pt-10">
+          <main
+            transition:animate={slide({ duration: "0.5s" })}
+            class="flex flex-auto flex-col p-4 lg:p-6 lg:pt-10"
+          >
             <slot />
           </main>
 
@@ -119,7 +119,7 @@ const last_posts = posts.slice(0, 3);
         </div>
         <Footer />
       </div>
-      {includeSidebar && <SideBar />}
+      {includeSidebar && <SideBar transition:persist />}
     </div>
   </body>
 </html>
