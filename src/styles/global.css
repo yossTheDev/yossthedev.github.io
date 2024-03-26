@@ -28,7 +28,8 @@ img {
 
 @font-face {
   font-family: "Poppins-Font";
-  src: url("/fonts/Poppins-Regular.ttf") format("woff2"),
+  src:
+    url("/fonts/Poppins-Regular.ttf") format("woff2"),
     url("/fonts/Poppins-Regular.ttf") format("woff");
   font-weight: bold;
   font-style: bold;
@@ -37,7 +38,8 @@ img {
 
 @font-face {
   font-family: "Poppins-Font-Bold";
-  src: url("/fonts/Poppins-Bold.ttf") format("woff2"),
+  src:
+    url("/fonts/Poppins-Bold.ttf") format("woff2"),
     url("/fonts/Poppins-Bold.ttf") format("woff");
   font-weight: bold;
   font-style: bold;
@@ -110,4 +112,20 @@ h2 {
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 120%;
+}
+
+.side-item lord-icon {
+  width: 8.5rem;
+  height: 1.5rem;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  color: #d4d4d4;
+  height: 2rem;
+  width: 2rem;
 }
