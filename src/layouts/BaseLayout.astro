@@ -28,14 +28,15 @@ const last_posts = posts.slice(0, 3);
 <html lang="en" data-theme="lofi">
   <head>
     <BaseHead title={title} description={description} image={image} />
-    <ViewTransitions />
+    <ViewTransitions/>
     
     <!-- Google tag (gtag.js) -->
     <script
       type="text/partytown"
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-X851WQC84E"
-    ></script><script>
+    ></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -50,10 +51,11 @@ const last_posts = posts.slice(0, 3);
       defer
       src="https://static.cloudflareinsights.com/beacon.min.js"
       data-cf-beacon='{"token": "e06c78200d25473f9e64203047113ac7"}'
-    ></script><!-- End Cloudflare Web Analytics -->
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
   </head>
 
-  <body class="bg-base-100">
+  <body class="background-texture">
     <div class="drawer-mobile drawer text-white">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content flex flex-col">

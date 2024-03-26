@@ -72,6 +72,7 @@ h2 {
     background-position: 0% 50%;
   }
 }
+
 .gradient {
   background-image: linear-gradient(-45deg, #2cd8d5, #8e37d7);
   background-size: 300% 100%;
@@ -101,4 +102,12 @@ h2 {
 
 .bounce-scale {
   animation: bounce-scale 1s ease-in-out infinite;
+}
+
+.background-texture {
+  background: url("../assets/ffflux2.svg");
+  background-position: 80% 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: 120%;
 }
