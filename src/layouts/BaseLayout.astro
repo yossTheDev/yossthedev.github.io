@@ -1,13 +1,12 @@
 ---
 import { getCollection } from "astro:content";
-import { ViewTransitions, slide } from "astro:transitions";
+import { ViewTransitions } from "astro:transitions";
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
-import HorizontalCard from "../components/HorizontalCard.astro";
+import NewsCard from "../components/NewsCard.astro";
 import SideBar from "../components/SideBar.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
-import NewsCard from "../components/NewsCard.astro";
 
 const {
   image,
