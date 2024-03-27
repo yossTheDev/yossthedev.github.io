@@ -12,14 +12,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "2.1.1",
+    "@astrojs/mdx": "2.2.2",
     "@astrojs/partytown": "2.0.4",
     "@astrojs/prefetch": "0.4.1",
     "@astrojs/rss": "4.0.5",
-    "@astrojs/sitemap": "^3.1.1",
+    "@astrojs/sitemap": "3.1.2",
     "@astrojs/tailwind": "^5.1.0",
     "@lordicon/element": "^1.6.0",
-    "astro": "^4.4.15",
+    "astro": "4.5.10",
     "daisyui": "^2.27.0",
     "dayjs": "^1.11.7",
     "lottie-web": "^5.12.2",
