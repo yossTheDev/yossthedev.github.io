@@ -16,7 +16,7 @@ import SideItem from "./SideItem.astro";
 >
   <label for="my-drawer" class="drawer-overlay bg-base-200/5"></label>
   <div
-    class="menu flex w-[20rem] lg:bg-transparent cursor-default flex-col flex-nowrap overflow-y-auto bg-base-100 p-2 text-gray-800 lg:my-4 lg:w-20"
+    class="menu flex w-[20rem] cursor-default flex-col flex-nowrap overflow-y-auto bg-base-100 p-2 text-gray-800 md:w-20 md:bg-transparent"
   >
     <!-- Hero Image -->
     <div class="flex w-fit">
@@ -42,7 +42,7 @@ import SideItem from "./SideItem.astro";
 
     <!-- Pages -->
     <div
-      class="flex md:items-center md:justify-center shrink grow gap-1 flex-col lg:gap-2 text-gray-200"
+      class="flex shrink grow flex-col gap-1 text-gray-200 md:items-center md:justify-center lg:gap-2"
     >
       <SideItem id="home" label="home" href="/">
         <lord-icon
@@ -74,7 +74,7 @@ import SideItem from "./SideItem.astro";
       <div class="hidden">
         <a
           rel="prefetch"
-          class="flex gap-2 md:justify-center rounded-2xl py-2 px-1 transition-all fill-neutral-300 hover:bg-neutral lg:rounded-xl lg:hover:scale-105"
+          class="flex gap-2 rounded-2xl fill-neutral-300 px-1 py-2 transition-all hover:bg-neutral md:justify-center lg:rounded-xl lg:hover:scale-105"
           id="cv"
           href="/cv"
         >
@@ -126,13 +126,13 @@ import SideItem from "./SideItem.astro";
 
     <!-- Social Networks -->
     <div
-      class="social-icons my-2 items-center flex gap-2 self-center px-2 lg:flex-col lg:gap-3 lg:px-0"
+      class="social-icons my-2 flex items-center gap-2 self-center px-2 lg:flex-col lg:gap-3 lg:px-0"
     >
       <!-- Telegram  -->
       <a
         href="https:/t.me/yossthedev"
         target="_blank"
-        class="mx-3 lg:mx-auto hover:text-white h-8 w-8 hover:bg-[#269FDA] rounded-full p-2 hover:scale-105 transition-all"
+        class="mx-3 h-8 w-8 rounded-full p-2 transition-all hover:scale-105 hover:bg-[#269FDA] hover:text-white lg:mx-auto"
         aria-label="Telegram"
         title="Telegram"
       >
@@ -150,7 +150,7 @@ import SideItem from "./SideItem.astro";
       <a
         href="https://github.com/yossthedev"
         target="_blank"
-        class="mx-3 lg:mx-auto hover:text-white hover:bg-[#222222] rounded-full p-2 hover:scale-105 transition-all"
+        class="mx-3 rounded-full p-2 transition-all hover:scale-105 hover:bg-[#222222] hover:text-white lg:mx-auto"
         aria-label="Github"
         title="Github"
       >
@@ -171,7 +171,7 @@ import SideItem from "./SideItem.astro";
       <a
         href="https://twitter.com/yossthedev"
         target="_blank"
-        class="mx-3 lg:mx-auto hover:text-white hover:bg-[#1b1b1b] rounded-full p-2 hover:scale-105 transition-all"
+        class="mx-3 rounded-full p-2 transition-all hover:scale-105 hover:bg-[#1b1b1b] hover:text-white lg:mx-auto"
         aria-label="Twitter"
         title="Twitter"
       >
@@ -192,7 +192,7 @@ import SideItem from "./SideItem.astro";
       <a
         href="/rss.xml"
         target="_blank"
-        class="hover:text-white hover:bg-[#fd8751] rounded-full p-2 hover:scale-105 transition-all"
+        class="rounded-full p-2 transition-all hover:scale-105 hover:bg-[#fd8751] hover:text-white"
         aria-label="RSS Feed"
         title="RSS Feed"
       >
