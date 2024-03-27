@@ -1,12 +1,12 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import SideBar from "../components/SideBar.astro";
-
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 import { getCollection } from "astro:content";
-import HorizontalCard from "../components/HorizontalCard.astro";
+import { ViewTransitions } from "astro:transitions";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import NewsCard from "../components/NewsCard.astro";
+import SideBar from "../components/SideBar.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
 
 const {
   image,
@@ -23,17 +23,18 @@ const posts = (await getCollection("blog")).sort(
 const last_posts = posts.slice(0, 3);
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="lofi">
   <head>
     <BaseHead title={title} description={description} image={image} />
+    <ViewTransitions />
 
     <!-- Google tag (gtag.js) -->
     <script
       type="text/partytown"
       async
-      src="https://www.googletagmanager.com/gtag/js?id=G-X851WQC84E"
-    ></script><script>
+      src="https://www.googletagmanager.com/gtag/js?id=G-X851WQC84E"></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
@@ -47,55 +48,56 @@ const last_posts = posts.slice(0, 3);
     <script
       defer
       src="https://static.cloudflareinsights.com/beacon.min.js"
-      data-cf-beacon='{"token": "e06c78200d25473f9e64203047113ac7"}'
-    ></script><!-- End Cloudflare Web Analytics -->
+      data-cf-beacon='{"token": "e06c78200d25473f9e64203047113ac7"}'></script>
+    <!-- End Cloudflare Web Analytics -->
   </head>
 
-  <body class="bg-base-100">
-    <div class="drawer-mobile drawer text-white">
+  <body class="background-texture">
+    <div class="drawer drawer-mobile text-neutral-300">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content flex flex-col">
+      <div class="drawer-content">
         <Header title={SITE_TITLE} />
-        <div class="flex flex-auto flex-col lg:flex-row">
+        <div class="md:flex md:justify-center">
           <div id="breadcums"></div>
-          <main class="flex flex-auto flex-col p-4 lg:p-6 lg:pt-10">
+          <main class="p-8 lg:p-6 lg:pt-10">
             <slot />
           </main>
 
           <!-- Latest Posts -->
           {
             includeNewsBar && (
-              <div class="mx-6 my-6 flex h-fit flex-auto flex-col rounded-3xl bg-base-200 p-2 shadow-2xl lg:mr-2 lg:max-w-[14rem]">
-                <div class="flex flex-col gap-2">
-                  <div class="mx-auto">
-                    <div class="mb-2 mt-4 flex w-full gap-2 font-bold text-gray-500 select-none">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="icon icon-tabler icon-tabler-article my-auto"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        stroke-width="2"
-                        stroke="currentColor"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
-                        <path d="M7 8h10" />
-                        <path d="M7 12h10" />
-                        <path d="M7 16h10" />
-                      </svg>
-                      <p class="my-auto text-xs font-bold">
-                        Ùltimas Publicaciones
-                      </p>
-                    </div>
+              <div
+                transition:persist
+                class="bg sticky top-0 m-6 flex h-fit flex-auto flex-col p-2 md:mr-2 md:max-w-[14rem]"
+              >
+                <div class="flex flex-col items-center gap-2">
+                  <div class="mb-4 mt-4 flex w-full select-none items-center justify-center gap-2 font-bold text-gray-500">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-article my-auto"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      stroke-width="2"
+                      stroke="currentColor"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+                      <path d="M7 8h10" />
+                      <path d="M7 12h10" />
+                      <path d="M7 16h10" />
+                    </svg>
+                    <p class="my-auto text-xs font-bold">
+                      Ùltimas Publicaciones
+                    </p>
                   </div>
                 </div>
                 {last_posts.map((post, index) => (
                   <>
-                    <HorizontalCard
+                    <NewsCard
                       title={post.data.title}
                       img={post.data.heroImage}
                       desc={post.data.description}
@@ -105,7 +107,7 @@ const last_posts = posts.slice(0, 3);
                       newsPanel={true}
                     />
                     {index != last_posts.length - 1 && (
-                      <divider class="mx-auto my-2 h-1 w-1 rounded-full bg-gray-600/20 p-1" />
+                      <divider class="mx-auto my-3 h-1 w-1 rounded-full bg-gray-600/20 p-1" />
                     )}
                   </>
                 ))}
@@ -115,7 +117,7 @@ const last_posts = posts.slice(0, 3);
         </div>
         <Footer />
       </div>
-      {includeSidebar && <SideBar />}
+      {includeSidebar && <SideBar transition:persist />}
     </div>
   </body>
 </html>

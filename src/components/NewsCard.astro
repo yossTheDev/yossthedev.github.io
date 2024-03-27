@@ -1,32 +1,19 @@
 ---
-const {
-  title,
-  img,
-  desc,
-  url,
-  badge,
-  tags,
-  target = "_blank",
-  newsPanel,
-} = Astro.props;
+const { title, img, desc, url, badge, tags, target = "_blank" } = Astro.props;
 import { Image } from "astro:assets";
 ---
 
 <div
-  class="rounded bg-base-200 p-0.5 transition ease-in-out hover:bg-neutral active:bg-base-300/70 portrait:hover:scale-95"
+  class="rounded-2xl p-0.5 transition ease-in-out hover:ring-2 hover:ring-purple-400 active:bg-base-300/40 portrait:hover:scale-95"
 >
   <a href={url} target={target}>
-    <div
-      class={`hero-content flex-col  md:flex-row ${
-        newsPanel && "flex-wrap p-2"
-      }`}
-    >
+    <div class="hero-content flex flex-col">
       {
         img && (
           <Image
             src={img}
-            height={250}
-            width={450}
+            height={150}
+            width={250}
             format="webp"
             alt={title}
             class="flex w-full max-w-full rounded-xl md:max-w-[13rem]"
@@ -34,7 +21,7 @@ import { Image } from "astro:assets";
         )
       }
       <div class="w-full grow">
-        <h2 class="text-xl font-bold">
+        <h2 class="text font-bold">
           {title}
           {
             badge && (
@@ -44,7 +31,7 @@ import { Image } from "astro:assets";
             )
           }
         </h2>
-        <p class="text-1xl py-1">{desc}</p>
+        <p class="line-clamp-3 py-1 text-sm">{desc}</p>
         <div class="card-actions justify-start">
           {
             tags &&

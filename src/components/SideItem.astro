@@ -1,0 +1,13 @@
+---
+const { id, href, label } = Astro.props;
+---
+
+<a
+  rel="prefetch"
+  class="flex items-center gap-2 rounded fill-neutral-300 p-2 transition-all hover:bg-neutral md:h-10 md:w-10 md:justify-center md:rounded-2xl lg:rounded-xl lg:hover:scale-105"
+  id={id}
+  href={href}
+>
+  <slot />
+  <p class="lg:hidden">{label}</p>
+</a>
