@@ -59,17 +59,14 @@ const last_posts = posts.slice(0, 3);
         <Header title={SITE_TITLE} />
         <div class="md:flex md:justify-center">
           <div id="breadcums"></div>
-          <main class="p-8 lg:p-6 lg:pt-10">
+          <main class="w-full p-8 lg:p-6 lg:pt-10">
             <slot />
           </main>
 
           <!-- Latest Posts -->
           {
             includeNewsBar && (
-              <div
-                transition:persist
-                class="bg sticky top-0 m-6 flex h-fit flex-auto flex-col p-2 md:mr-2 md:max-w-[14rem]"
-              >
+              <div class="bg sticky top-0 m-6 flex h-fit flex-auto flex-col p-2 md:mr-2 md:max-w-[14rem]">
                 <div class="flex flex-col items-center gap-2">
                   <div class="mb-4 mt-4 flex w-full select-none items-center justify-center gap-2 font-bold text-gray-500">
                     <svg
