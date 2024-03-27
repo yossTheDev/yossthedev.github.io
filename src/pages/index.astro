@@ -7,7 +7,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout>
   <!-- Hero Panel -->
   <div
-    class="hero-gradient relative mb-64 flex max-h-80 -skew-y-3 skew-x-2 rounded-3xl p-2 shadow-inner lg:mb-40 lg:pb-10 lg:pl-10 lg:pt-10 lg:shadow-xl lg:shadow-primary/10 portrait:hidden"
+    class="hero-gradient mb-64 flex max-h-80 -skew-y-3 skew-x-2 rounded-3xl p-2 shadow-inner lg:mb-40 lg:pb-10 lg:pl-10 lg:pt-10 lg:shadow-xl lg:shadow-primary/10 portrait:hidden"
   >
     <div
       class="flex h-[36rem] max-h-[38rem] flex-auto -skew-x-1 skew-y-1 select-none flex-col overflow-hidden rounded-3xl border-4 border-base-300/80 bg-base-200 bg-opacity-90 bg-no-repeat p-8 shadow-xl backdrop-blur-3xl transition-all lg:h-96 lg:-skew-y-1 lg:skew-x-1 lg:flex-row portrait:shadow-xl portrait:shadow-primary"
@@ -146,11 +146,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </div>
 
   <!-- Hero Panel Mobile-->
-  <div class="my-32 flex flex-col landscape:hidden">
+  <div
+    class="flex h-[80vh] flex-col items-center justify-center landscape:hidden"
+  >
     <h2 class="mb-2 text-center text-xl text-neutral-300">Hi 🖖 I am</h2>
 
     <div
-      class="my-2 flex -skew-x-1 skew-y-1 items-center justify-center gap-4 rounded-2xl border-2 border-base-300/70 bg-base-200 bg-opacity-10 bg-clip-padding p-4 shadow shadow-primary backdrop-blur-sm backdrop-filter"
+      class="my-2 flex -skew-x-1 skew-y-1 select-none items-center justify-center gap-4 rounded-2xl border-2 border-base-300/70 bg-base-200 bg-opacity-50 bg-clip-padding p-4 shadow shadow-primary ring-2 ring-primary backdrop-blur-sm backdrop-filter transition-all hover:ring-4"
     >
       <Image
         class="rounded-full border-8 border-white"
@@ -171,7 +173,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     <!-- Tech Stack -->
     <div class="mt-4 flex justify-center gap-2">
-      <div class="rounded-full bg-neutral p-2">
+      <div class="rounded-full p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="icon icon-tabler icon-tabler-brand-react"
@@ -207,7 +209,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </svg>
       </div>
 
-      <div class="rounded-full bg-neutral p-2">
+      <div class="rounded-full p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="icon icon-tabler icon-tabler-brand-tailwind"
@@ -227,7 +229,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </svg>
       </div>
 
-      <div class="rounded-full bg-neutral p-2">
+      <div class="rounded-full p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="icon icon-tabler icon-tabler-brand-html5"
@@ -246,7 +248,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </svg>
       </div>
 
-      <div class="rounded-full bg-neutral p-2">
+      <div class="rounded-full p-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="icon icon-tabler icon-tabler-brand-css3"
