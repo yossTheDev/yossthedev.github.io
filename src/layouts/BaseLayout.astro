@@ -53,13 +53,13 @@ const last_posts = posts.slice(0, 3);
   </head>
 
   <body class="background-texture">
-    <div class="drawer drawer-mobile text-white">
+    <div class="drawer drawer-mobile text-neutral-300">
       <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-      <div class="drawer-content flex flex-col">
+      <div class="drawer-content">
         <Header title={SITE_TITLE} />
-        <div class="flex flex-auto flex-col lg:flex-row">
+        <div class="md:flex md:justify-center">
           <div id="breadcums"></div>
-          <main class="flex flex-col p-4 lg:p-6 lg:pt-10">
+          <main class="p-8 lg:p-6 lg:pt-10">
             <slot />
           </main>
 

@@ -108,10 +108,10 @@ h2 {
 
 .background-texture {
   background: url("../assets/ffflux2.svg");
-  background-position: 80% 20%;
-  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-size: 120%;
+  background-size: cover;
+  animation: gradient-bg 20s ease-in-out infinite;
 }
 
 .side-item lord-icon {
