@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 ---
 
 <div
-  class="rounded p-0.5 transition ease-in-out hover:bg-neutral active:bg-base-300/70 portrait:hover:scale-95"
+  class="rounded-2xl p-0.5 transition ease-in-out hover:ring-2 hover:ring-purple-400 active:bg-base-300/40 portrait:hover:scale-95"
 >
   <a href={url} target={target}>
     <div class="hero-content flex flex-col">
@@ -31,7 +31,7 @@ import { Image } from "astro:assets";
             )
           }
         </h2>
-        <p class="py-1 text-sm">{desc}</p>
+        <p class="line-clamp-3 py-1 text-sm">{desc}</p>
         <div class="card-actions justify-start">
           {
             tags &&
