@@ -60,10 +60,7 @@ const last_posts = posts.slice(0, 3);
         <Header title={SITE_TITLE} />
         <div class="flex flex-auto flex-col lg:flex-row">
           <div id="breadcums"></div>
-          <main
-            transition:animate={slide({ duration: "0.5s" })}
-            class="flex flex-auto flex-col p-4 lg:p-6 lg:pt-10"
-          >
+          <main class="flex flex-col p-4 lg:p-6 lg:pt-10">
             <slot />
           </main>
 

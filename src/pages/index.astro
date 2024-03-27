@@ -1,5 +1,5 @@
 ---
-import {Image} from "astro:assets"
+import { Image } from "astro:assets";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
@@ -8,14 +8,14 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <div class="flex flex-auto flex-col gap-10 p-3 lg:p-1">
     <!-- Hero Panel -->
     <div
-      class="hero-gradient flex relative -skew-y-3 skew-x-2 lg:pt-10 lg:pb-10 lg:pl-10 rounded-3xl p-2 max-h-80 lg:mb-40 mb-64 lg:shadow-xl shadow-inner lg:shadow-primary/10"
+      class="hero-gradient relative mb-64 flex max-h-80 -skew-y-3 skew-x-2 rounded-3xl p-2 shadow-inner lg:mb-40 lg:pb-10 lg:pl-10 lg:pt-10 lg:shadow-xl lg:shadow-primary/10"
     >
       <div
-        class="skew-y-1 h-[36rem] p-8 lg:h-96 portrait:shadow-primary portrait:shadow-xl border-4 -skew-x-1 lg:-skew-y-1 lg:skew-x-1 flex max-h-[38rem] flex-auto select-none flex-col overflow-hidden rounded-3xl bg-base-200/95 backdrop-blur-3xl bg-no-repeat shadow-xl border-base-300/80 transition-all lg:flex-row"
+        class="flex h-[36rem] max-h-[38rem] flex-auto -skew-x-1 skew-y-1 select-none flex-col overflow-hidden rounded-3xl border-4 border-base-300/80 bg-base-200/95 bg-no-repeat p-8 shadow-xl backdrop-blur-3xl transition-all lg:h-96 lg:-skew-y-1 lg:skew-x-1 lg:flex-row portrait:shadow-xl portrait:shadow-primary"
       >
         <!-- Hero Text -->
-        <div class="order-2 h-fit lg:h-full flex flex-auto flex-col lg:order-1">
-          <div class="mx-auto lg:my-auto w-fit lg:ml-auto lg:w-96">
+        <div class="order-2 flex h-fit flex-auto flex-col lg:order-1 lg:h-full">
+          <div class="mx-auto w-fit lg:my-auto lg:ml-auto lg:w-96">
             <h1
               class="mt-2 whitespace-nowrap text-center text-3xl font-bold text-white lg:mt-0 lg:text-justify lg:text-7xl"
             >
@@ -29,8 +29,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
               Frontend and Software Developer
             </p>
 
-            <div class="lg:flex mt-4 gap-2 hidden">
-              <div class="p-2 bg-neutral rounded-full">
+            <div class="mt-4 hidden gap-2 lg:flex">
+              <div class="rounded-full bg-neutral p-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-brand-react"
@@ -67,7 +67,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </svg>
               </div>
 
-              <div class="p-2 bg-neutral rounded-full">
+              <div class="rounded-full bg-neutral p-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-brand-tailwind"
@@ -87,7 +87,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </svg>
               </div>
 
-              <div class="p-2 bg-neutral rounded-full">
+              <div class="rounded-full bg-neutral p-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-brand-html5"
@@ -107,7 +107,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
                 </svg>
               </div>
 
-              <div class="p-2 bg-neutral rounded-full">
+              <div class="rounded-full bg-neutral p-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-brand-css3"
@@ -131,21 +131,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <!-- Hero Image -->
-        <div class="order-1 flex  items-center lg:p-2 flex-auto flex-col lg:order-2">
+        <div
+          class="order-1 flex flex-auto flex-col items-center lg:order-2 lg:p-2"
+        >
           <Image
-          class="rounded-full shadow-2xl shadow-primary border-white border-8"
-          format="webp"
-          width={300}
-          height={300}
-          src="/profile_pic.png"
-          alt="Profile image"
-        />
+            class="rounded-full border-8 border-white shadow-2xl shadow-primary"
+            format="webp"
+            width={300}
+            height={300}
+            src="/profile_pic.png"
+            alt="Profile image"
+          />
         </div>
       </div>
     </div>
 
     <!-- Latest Projects -->
-    <div class="flex flex-auto flex-col gap-8 lg:flex-col select-none">
+    <div class="flex flex-auto select-none flex-col gap-8 lg:flex-col">
       <div class="flex flex-col gap-2">
         <div class="mx-auto w-full">
           <div
